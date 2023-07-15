@@ -1,31 +1,368 @@
+.bady {
+    display: flex;
+}
 .page {
-  min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
-  max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
-  margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+    min-width: 1100px;
+    max-width: 1600px;
+    width: 100%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    justify-content: start;
 }
 
 .header {
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  /* выше установили ограничения для секции */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #f2f2f2;
+    background-size: cover;
+    display: flex;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__block_margin_left {
+    margin-left: 64px;
+}
+
+.header__title {
+    align-self: center;
+    width: 730px;
+    font-size: 102px;
+    line-height: 96px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.header__subtitle {
+    position: absolute;
+    bottom: 30px;
+    left:0;
+    width: 388px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+    z-index: 2;
+}
+
 .header__square-pic {
-  height: 568px;
-  width: 568px;
+    height: 568px;
+    width: 568px;
+    position:absolute;
+    top:64px;
+    right:0;
+    background-color: #2f80ed;
+    z-index: 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
+.header__main-illustration {
+    width: 765px;
+    height: 608px;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.content-item_margin {
+    margin:100px auto 0;
+}
+
+.content__description {
+    width: 100%;
+    display: flex;
+}
+
+.description__two-columns {
+    margin:auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-columns__brif {
+    width: 175px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+    color:#2f80ed;
+}
+
+.two-columns__main-text {
+    width: 80%;
+    min-width: 784px;
+}
+
+.two-columns__paragraph {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.two-columns__paragraph:last-of-type {
+    margin-bottom: 0;
+}
+
+.two-columns__span-accent {
+    font-weight: 700;
+}
+
+.content__digits {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__digits-item {
+    width:100%;
+    margin: auto;
+}
+
+.content__digits-item_text {
+    text-align: center;
+}
+
+.digits__section-title {
+    width:60%;
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.digits__section-subtitle {
+    margin-top:20px;
+    width:60%;
+    line-height: 34px;
+    font-size: 24;
+    font-weight: normal;
+}
+
+.digits__table-row {
+    margin-top: 60px;
+}
+
+.table {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-item {
+    width: 250px;
+}
+
+
+.row-item_heading {
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.row-item_text {
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.content__feynman {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: 890px;
+    width: 100%;
+}
+
+.content__feinman-item_text {
+    text-align: center;
+}
+
+.feinman__title {
+    width: 648px;
+    line-height: 1.15;
+    font-size: 120px;
+    font-weight: 700;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.feinman__subtitle {
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    z-index: 1;
+    margin-top: 70px;
+}
+
+.feinman__image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.feinman__link {
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    right:48px;
+    z-index: 1;
+}
+
+.content__kaufman {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__kaufman {
+    position: relative;
+    overflow: hidden;
+}
+
+.kaufman-item {
+    margin: auto;
+    z-index: 1;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.kaufman__title {
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: 700;
+    width: 60%;
+    margin-top: 90px;
+}
+
+.kaufman__subtitle {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 20px;
+    width: 60%;
+}
+
+.kaufman__table {
+    margin-bottom: 90px;
+}
+
+.kaufman__table-row {
+    margin-top: 80px;
+}
+
+.kaufman__row-item {
+    width: 200px;
+}
+
+.kaufman__triangle {
+    position: absolute;
+    width:877px;
+    height:877px;
+    right:-210px;
+    top:0;
+    z-index: 0;
+}
+
+.footer {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    align-items:stretch;
+}
+
+.footer__columns {
+    justify-content:space-between;
+    width: 90%;
+    display: flex;
+    margin:60px auto 40px;
+}
+
+.footer__column_heading {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer__column_links {
+    margin:20px auto 16px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__column_link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.social_icon {
+    height: 16px;
+    width: 16px;
+    margin: auto 10px auto 0;
+}
+
+.social_link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer__column_copiright {
+    flex-basis: 711px;
+    position: relative;
+}
+
+.theme_dark {
+    color: white;
+    background-color: #1f1f1f;
+}
+
+.link {
+    color: #2f80ed;
+}
+
+.logo {
+    width: 228px;
+    height: 32px;
+    position: absolute;
+    z-index: 2;
+}
+
+.logo_place_header {
+    top: 30px;
+    left:0;
+}
+
+.logo_place_footer {
+    top:0;
+    left:0;
+}
+
+.author {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 18px 0;
+}
+
+.author-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: whitesmoke;
 }
